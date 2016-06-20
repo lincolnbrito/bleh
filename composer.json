@@ -1,0 +1,13 @@
+{
+    "name": "lincolnbrito/bleh",
+    "description": "A Laravel package example",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lincoln Brito",
+            "email": "lincoln.sbrito@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
