@@ -13,7 +13,9 @@ class BlehServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'bleh.php' => config_path('bleh.php')
+        ]);
     }
 
     /**
@@ -23,10 +25,9 @@ class BlehServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $DS = DIRECTORY_SEPARATOR;
         // config
-        $this->mergeConfigFrom(__DIR__.$DS.'Config'.$DS.'bleh.php', 'bleh');
-        
+        $this->mergeConfigFrom(__DIR__.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'bleh.php', 'bleh');
+
         $this->app['bleh'] = $this->app->share(function($app){
             return new Bleh;
         });
