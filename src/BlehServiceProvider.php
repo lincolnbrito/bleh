@@ -23,6 +23,10 @@ class BlehServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $DS = DIRECTORY_SEPARATOR;
+        // config
+        $this->mergeConfigFrom(__DIR__.$DS.'Config'.$DS.'bleh.php', 'bleh');
+        
         $this->app['bleh'] = $this->app->share(function($app){
             return new Bleh;
         });
