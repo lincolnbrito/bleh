@@ -13,6 +13,10 @@ class BlehServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Route
+        include __DIR__.DIRECTORY_SEPARATOR.'/routes.php';
+
+        // Lnaguage
         $this->loadTranslationsFrom(__DIR__.'/Lang', 'bleh');
 
         $this->publishes([
@@ -31,7 +35,7 @@ class BlehServiceProvider extends ServiceProvider
         // config
         $this->mergeConfigFrom(__DIR__.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'bleh.php', 'bleh');
         $this->mergeConfigFrom(__DIR__.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'bleh_config1.php', 'bleh');
-        
+
         $this->app['bleh'] = $this->app->share(function($app){
             return new Bleh;
         });

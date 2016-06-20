@@ -3,7 +3,10 @@ namespace LincolnBrito\Bleh;
 
 class Bleh {
     public static function saySomething() {
-        return trans('bleh::messages.greeting');
+        return [
+            trans('bleh::messages.greeting'),
+            config('bleh.message')
+        ];
         // return config('bleh.message');
         // return 'Hello World!';
     }
