@@ -6,4 +6,8 @@ class Bleh {
         return config('bleh.message');
         // return 'Hello World!';
     }
+
+    public static function sayAnother() {
+        return config('bleh.another.another_message');
+    }
 }
