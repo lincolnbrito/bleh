@@ -8,6 +8,6 @@ class Bleh {
     }
 
     public static function sayAnother() {
-        return config('bleh.another.another_message');
+        return config('bleh_config1.another');
     }
 }

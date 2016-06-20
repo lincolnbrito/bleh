@@ -1,4 +1,4 @@
 <?php
 return [
-    'another_message' => 'Another message from config'
+    'another' => 'Another message from config'
 ];

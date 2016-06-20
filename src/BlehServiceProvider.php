@@ -15,7 +15,7 @@ class BlehServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'bleh.php' => config_path('bleh.php'),
-            __DIR__.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'bleh.php' => config_path('bleh_config1.php')
+            __DIR__.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'bleh_config1.php' => config_path('bleh_config1.php')
         ]);
     }
 
