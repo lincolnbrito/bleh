@@ -36,6 +36,9 @@ class BlehServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'bleh.php', 'bleh');
         $this->mergeConfigFrom(__DIR__.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'bleh_config1.php', 'bleh');
 
+        // view
+        $this->loadViewsFrom(__DIR__.DIRECTORY_SEPARATOR.'Views', 'bleh');
+
         $this->app['bleh'] = $this->app->share(function($app){
             return new Bleh;
         });
