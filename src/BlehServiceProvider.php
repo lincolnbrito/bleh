@@ -25,7 +25,7 @@ class BlehServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__.'/path/to/views' => base_path('resources/views/vendor/courier')
+            __DIR__.DIRECTORY_SEPARATOR.'Views' => base_path('resources/views/vendor/bleh')
         ]);
     }
 
