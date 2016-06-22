@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bleh Package</title>
+    <title>{{$page_title}}</title>
 </head>
 <body>
 
-<h1>It Works</h1>
+<h1>{{$welcome_message}}</h1>
 
 </body>
 </html>
