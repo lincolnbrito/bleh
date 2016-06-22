@@ -2,6 +2,7 @@
     "name": "lincolnbrito/bleh",
     "description": "A Laravel package example",
     "license": "MIT",
+    "keywords": ["laravel"],
     "authors": [
         {
             "name": "Lincoln Brito",
@@ -9,5 +10,10 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "LincolnBrito\\Bleh\\": "src/"
+        }
+    }
 }
